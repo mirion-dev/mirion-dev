@@ -16,8 +16,8 @@
   <br>
 
   <picture>
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/mirion-dev/mirion-dev/output/snake.svg" />
-    <img alt="status" src="https://raw.githubusercontent.com/mirion-dev/mirion-dev/output/snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://github.com/mirion-dev/mirion-dev/blob/output/snake.svg" />
+    <img alt="snake" src="https://github.com/mirion-dev/mirion-dev/blob/output/snake-dark.svg" />
   </picture>
 
 </div>
