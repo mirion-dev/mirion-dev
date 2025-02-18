@@ -16,7 +16,6 @@
   <br>
   <br>
 
-  <img width=40 height=40 alt="c" src="https://github.com/devicons/devicon/blob/master/icons/c/c-original.svg">
   <img width=40 height=40 alt="c++" src="https://github.com/devicons/devicon/blob/master/icons/cplusplus/cplusplus-original.svg">
   <img width=40 height=40 alt="mathematica" src="https://upload.wikimedia.org/wikipedia/commons/2/20/Mathematica_Logo.svg">
   <img width=40 height=40 alt="python" src="https://github.com/devicons/devicon/blob/master/icons/python/python-original.svg">
