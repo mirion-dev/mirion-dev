@@ -23,7 +23,6 @@
   <img width=40 height=40 alt="typescript" src="https://github.com/devicons/devicon/blob/master/icons/typescript/typescript-original.svg">
   <img width=40 height=40 alt="nodejs" src="https://github.com/devicons/devicon/blob/master/icons/nodejs/nodejs-original.svg">
   <img width=40 height=40 alt="typst" src="https://avatars.githubusercontent.com/u/67595261">
-  <img width=40 height=40 alt="godot" src="https://github.com/devicons/devicon/blob/master/icons/godot/godot-original.svg">
 
   <br>
 
