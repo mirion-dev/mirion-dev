@@ -22,6 +22,7 @@
   <img width=40 height=40 alt="python" src="https://github.com/devicons/devicon/blob/master/icons/python/python-original.svg">
   <img width=40 height=40 alt="javascript" src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg">
   <img width=40 height=40 alt="typescript" src="https://github.com/devicons/devicon/blob/master/icons/typescript/typescript-original.svg">
+  <img width=40 height=40 alt="godot" src="https://github.com/devicons/devicon/blob/master/icons/godot/godot-original.svg">
   <img width=40 height=40 alt="mathematica" src="https://upload.wikimedia.org/wikipedia/commons/2/20/Mathematica_Logo.svg">
   <img width=40 height=40 alt="typst" src="https://avatars.githubusercontent.com/u/67595261">
 
