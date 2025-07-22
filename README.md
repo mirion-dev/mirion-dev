@@ -16,7 +16,7 @@
   <br>
   <br>
 
-  <img width=40 height=40 alt="c" src="https://github.com/devicons/devicon/blob/master/icons/c/c-original.svg">
+  <img width=40 height=40 alt="c" src="https://github.com/devicons/devicon/blob/v2.16.0/icons/c/c-original.svg">
   <img width=40 height=40 alt="c++" src="https://github.com/devicons/devicon/blob/master/icons/cplusplus/cplusplus-original.svg">
   <img width=40 height=40 alt="python" src="https://github.com/devicons/devicon/blob/master/icons/python/python-original.svg">
   <img width=40 height=40 alt="javascript" src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg">
