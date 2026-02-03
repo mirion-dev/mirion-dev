@@ -1,0 +1,65 @@
+name: update
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  update:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v6
+        with:
+          ref: output
+
+      - name: generate stats card
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: stats
+          options: username=${{ github.repository_owner }}&title_color=0969da&text_color=1f2328&icon_color=0969da&border_color=d1d9e0&bg_color=f6f8fa&show_icons=true
+          path: stats.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: generate dark stats card
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: stats
+          options: username=${{ github.repository_owner }}&title_color=4493f8&text_color=f0f6fc&icon_color=4493f8&border_color=3d444d&bg_color=151b23&show_icons=true
+          path: stats-dark.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: generate top-langs card
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: top-langs
+          options: username=${{ github.repository_owner }}&title_color=0969da&text_color=1f2328&icon_color=0969da&border_color=d1d9e0&bg_color=f6f8fa&layout=donut&hide=mathematica,css,scss
+          path: top-langs.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: generate dark top-langs card
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: top-langs
+          options: username=${{ github.repository_owner }}&title_color=4493f8&text_color=f0f6fc&icon_color=4493f8&border_color=3d444d&bg_color=151b23&layout=donut&hide=mathematica,css,scss
+          path: top-langs-dark.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: generate snakes
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            snake.svg
+            snake-dark.svg?palette=github-dark
+
+      - name: commit
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add *.svg
+          git commit -m "update cards & snakes" || exit 0
+          git push
