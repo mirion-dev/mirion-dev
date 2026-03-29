@@ -1,4 +1,4 @@
-name: update
+name: Update cards
 
 on:
   workflow_dispatch:
@@ -11,12 +11,12 @@ jobs:
       contents: write
     runs-on: ubuntu-latest
     steps:
-      - name: checkout
+      - name: Check out to output
         uses: actions/checkout@v6
         with:
           ref: output
 
-      - name: generate stats card
+      - name: Generate stats card
         uses: readme-tools/github-readme-stats-action@v1
         with:
           card: stats
@@ -24,7 +24,7 @@ jobs:
           path: stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: generate dark stats card
+      - name: Generate dark stats card
         uses: readme-tools/github-readme-stats-action@v1
         with:
           card: stats
@@ -32,7 +32,7 @@ jobs:
           path: stats-dark.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: generate top-langs card
+      - name: Generate top-langs card
         uses: readme-tools/github-readme-stats-action@v1
         with:
           card: top-langs
@@ -40,7 +40,7 @@ jobs:
           path: top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: generate dark top-langs card
+      - name: Generate dark top-langs card
         uses: readme-tools/github-readme-stats-action@v1
         with:
           card: top-langs
@@ -48,7 +48,7 @@ jobs:
           path: top-langs-dark.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: generate snakes
+      - name: Generate snake cards
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
@@ -56,10 +56,10 @@ jobs:
             snake.svg
             snake-dark.svg?palette=github-dark
 
-      - name: commit
+      - name: Commit cards
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@users.noreply.github.com"
           git add *.svg
-          git commit -m "update cards & snakes" || exit 0
+          git commit -m "Update cards" || exit 0
           git push
